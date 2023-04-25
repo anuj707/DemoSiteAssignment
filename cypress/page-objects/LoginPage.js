@@ -5,14 +5,12 @@ class LoginPage {
   
     fillUsername(value) {
       const field = cy.get('[name="username"]')
-      field.clear()
       field.type(value)
       return this
     }
   
     fillPassword(value) {
       const field = cy.get('[name="password"]')
-      field.clear()
       field.type(value)
       return this
     }
