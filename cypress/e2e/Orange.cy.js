@@ -11,16 +11,16 @@ describe('Login and Logout Tests', () => {
 
   it('Logs in and out of OrangeHRM website with valid credentials', () => {
     loginPage.fillUsername('Admin')
-            .fillPassword('admin123')
-            .submit()
+    loginPage.fillPassword('admin123')
+    loginPage.submit()
     dashboardPage.assertLoggedIn()
     dashboardPage.logout()
   })
 
   it('Fails to login with invalid credentials', () => {
     loginPage.fillUsername('Admin')
-            .fillPassword('invalidpassword')
-            .submit()
+    loginPage.fillPassword('invalidpassword')
+    loginPage.submit()
     loginPage.assertFailure()
   })
 })
